@@ -1,0 +1,30 @@
+li:hover {
+ background-color : green;
+ 
+}
+
+body{
+  margin :30px 50px ;
+}
+ul.success li{
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #2E8B57;
+  color: #7FFFD4;
+}
+
+ul.error li{
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #DC143C;
+  color: #ffcccc;
+}
+
+h3 {
+ width : 7rem;
+ 
+}

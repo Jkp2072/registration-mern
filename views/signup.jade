@@ -1,0 +1,58 @@
+extends layout
+
+block content 
+    h2.page-header Sign UP 
+    p New students must register here
+    if errors 
+        each error, i in errors 
+            div.alert.alert-danger #{error.msg}
+    form(method='post',action='/users/signup',enctype='multipart/form-data')
+        .form-group
+        label Name
+        input.form-control(name='name', type='text', placeholder='Enter name')
+        .form-group
+        label Email
+        input.form-control(name='email', type='email', placeholder='Enter email')
+        .form-group
+        label Username
+        input.form-control(name='username', type='text', placeholder='Enter username')
+        .form-group
+        label Password
+        input.form-control(name='password', type='password', placeholder='Enter password')
+        .form-group
+        label Retype password
+        input.form-control(name='password2', type='password', placeholder='Retype password')
+        .form-group
+        label college
+        input.form-control(name='college', type='text', placeholder='Enter college name')
+        .form-group
+        label Year(currently studying)<br>
+        .form-group
+        input(type="radio", name="year", value="0")
+        | Not in any of them<br>
+        .form-group
+        input(type="radio", name="year", value="1")
+        | 1st Year<br>
+        .form-group
+        input(type="radio", name="year", value="2")
+        | 2nd year<br>
+        .form-group
+        input(type="radio", name="year", value="3")
+        | 3rd Year<br>
+        .form-group
+        input(type="radio", name="year", value="4")
+        | 4th year<br>
+        .form-group
+        label Branch
+        .form-group
+        input(type="radio", name="branch", value="0")
+        | CSE<br>
+        .form-group
+        input(type="radio", name="branch", value="1")
+        | ECE<br>
+        
+        .form-group
+        label Image
+        input.form-control(name='image', type='file')
+        .form-group
+        input.form-control.btn.btn-success(type='submit',name='submit',value='sign up')
